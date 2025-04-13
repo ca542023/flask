@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__)
 
 # 환경 변수에서 값 불러오기; Railway Variables에 CALLBACK_URL, NAVER_CLIENT_ID, NAVER_CLIENT_SECRET로 등록해둔 값 사용
-CALLBACK_URL = os.getenv("CALLBACK_URL", "https://cpss.up.railway.app/callback")
+CALLBACK_URL = os.getenv("CALLBACK_URL")
 NAVER_CLIENT_ID = os.getenv("NAVER_CLIENT_ID")
 NAVER_CLIENT_SECRET = os.getenv("NAVER_CLIENT_SECRET")
 # state 값을 실제 운영에서는 CSRF 방지를 위해 난수로 생성해야 합니다.
